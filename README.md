@@ -16,11 +16,10 @@ This ESP is based off Iwebz's ESP from ~2015.
 ![Preview of an ESP style](https://nullified.s-ul.eu/yuRbRT21)
 
 ## How to use
-Subscribe to the **[Surface Library](https://gamesense.pub/forums/viewtopic.php?id=18793)** or this will not work!
+1. Subscribe to the **[Surface Library](https://gamesense.pub/forums/viewtopic.php?id=18793)** or this will not work!
+2. Download this **[Font](https://fontzone.net/font-details/visitor-tt2-brk)** or this will not work!
 
-1. Download this **[Font](https://fontzone.net/font-details/visitor-tt2-brk)** or this will not work!
-
-2. Move the lua to the CSGO directory and load the lua.
+3. Move the lua to the CSGO directory and load the lua.
  > C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive
 
 ## Credits
