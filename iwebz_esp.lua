@@ -285,12 +285,17 @@ local function draw_main_esp()
 
                     local enemy_weapon = entity.get_player_weapon(enemy)
                     local current_ammo = entity.get_prop(enemy_weapon, "m_iClip1") or 0
-
-                    local wide, tall = surface.get_text_size(font, weapon_name:lower().."-"..current_ammo)
+                    local current_weapon
+                    if not (weapon_item_index == 31 or weapon_item_index == 41 or weapon_item_index == 42 or weapon_item_index == 43 or weapon_item_index == 44 or weapon_item_index == 45 or weapon_item_index == 46 or weapon_item_index == 47 or weapon_item_index == 48 or weapon_item_index == 49 or weapon_item_index == 59 or weapon_item_index >= 500) then
+                        current_weapon = weapon_name:lower().."-"..current_ammo
+                    else
+                        current_weapon = weapon_name:lower()
+                    end
+                    local wide, tall = surface.get_text_size(font, current_weapon)
         
                     local middle_x = (bbox[1] - bbox[3]) / 2
         
-                    surface.draw_text(bbox[1] - wide / 2 - middle_x, bbox[4]+12, color[1], color[2], color[3], 255, font, weapon_name:lower().."-"..current_ammo)
+                    surface.draw_text(bbox[1] - wide / 2 - middle_x, bbox[4]+12, color[1], color[2], color[3], 255, font, current_weapon)
                 end
             end
         end
