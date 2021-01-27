@@ -109,9 +109,16 @@ local function draw_esp()
                     for i = 1, 5 do
                         renderer.rectangle(bbox[1]-i, bbox[4]+i+5, width, 1, 0, 0, 0, 255)
                         renderer.rectangle(bbox[1]-i, bbox[4]+i+5, health_width, 1, color[1], color[2], color[3], color[4])
-                        renderer.rectangle(bbox[1]-4, bbox[4]+9, health_width, 1, color[1]/1.5, color[2]/1.5, color[3]/1.5, color[4])
-                        renderer.rectangle(bbox[1]-5, bbox[4]+10, health_width, 1, color[1]/1.5, color[2]/1.5, color[3]/1.5, color[4])
+                        renderer.rectangle(bbox[1]-4, bbox[4]+8, health_width, 1, color[1]/1.5, color[2]/1.5, color[3]/1.5, color[4])
+                        renderer.rectangle(bbox[1]-5, bbox[4]+9, health_width, 1, color[1]/1.5, color[2]/1.5, color[3]/1.5, color[4])
+
+                        
                     end
+                    local color = entity.is_dormant(player) and {100, 100, 100, 125} or {255, 255, 255, 255}
+                    renderer.rectangle(bbox[1], bbox[4]+5, width+1, 1, color[1], color[2], color[3], 255)
+                    renderer.rectangle((bbox[1]+1)-5, bbox[4]+10, width, 1, color[1], color[2], color[3], 255)
+                    renderer.line((bbox[1]+1)-6, bbox[4]+11, bbox[1], bbox[4]+5, color[1], color[2], color[3], 255)
+                    renderer.line(bbox[1]+width-4, bbox[4]+11, bbox[1]+width+2, bbox[4]+5, color[1], color[2], color[3], 255)
                 end
 
                 if ui.get(menu.boxstyle) == "Bounding" then
